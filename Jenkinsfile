@@ -1,5 +1,6 @@
 pipeline {
     environment {
+    def dockerHome = tool 'docker'
     dockerRegistry = "osaidiaws/docker-nodejs"
     dockerRegistryCredential = 'dockerhub'
     dockerImage = ''
