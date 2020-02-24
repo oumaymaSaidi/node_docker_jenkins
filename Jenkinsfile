@@ -5,7 +5,9 @@ pipeline {
     dockerRegistryCredential = 'dockerhub'
     dockerImage = ''
     }
-  agent any
+    agent {
+    docker 'circleci/node:9.3-stretch-browsers'
+  }
   tools {nodejs "node"}
   stages {
     stage('Cloning Git') {
