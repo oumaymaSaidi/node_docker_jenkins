@@ -7,13 +7,6 @@ pipeline {
   agent any
   tools {nodejs "node"}
   stages {
-    stage('Building image') {
-      steps{
-        script {
-          docker.build registry + ":$BUILD_NUMBER"
-        }
-      }
-    }
     stage('Cloning Git') {
       steps {
         git 'https://github.com/oumaymaSaidi/node_docker_jenkins.git'
